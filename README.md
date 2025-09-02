@@ -1,46 +1,117 @@
-# Getting Started with Create React App
+# Currency Exchange Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Una aplicación web moderna para convertir monedas en tiempo real, construida con React y TypeScript.
 
-## Available Scripts
+## 🚀 Características
 
-In the project directory, you can run:
+- **Conversión en tiempo real**: Utiliza la API de VATComply para obtener tasas de cambio actualizadas
+- **Interfaz intuitiva**: Diseño limpio y responsive que funciona en dispositivos móviles y desktop
+- **10 monedas principales**: USD, EUR, GBP, JPY, AUD, CAD, CHF, CNY, SEK, NZD
+- **Validación de entrada**: Solo permite números positivos y formato decimal válido
+- **Intercambio rápido**: Botón para intercambiar las monedas de origen y destino
+- **Enlaces dinámicos**: Enlaces directos a XE.com para más información sobre cada moneda
+- **Prevención de duplicados**: No permite seleccionar la misma moneda como origen y destino
 
-### `npm start`
+## 🛠️ Tecnologías
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React 18** con TypeScript
+- **CSS Modules** para estilos
+- **VATComply API** para tasas de cambio
+- **Google Fonts** (Inter)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 📋 Prerrequisitos
 
-### `npm test`
+Antes de comenzar, asegúrate de tener instalado:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Node.js](https://nodejs.org/) (versión 14 o superior)
+- [npm](https://www.npmjs.com/) (viene incluido con Node.js)
 
-### `npm run build`
+## 🏃‍♂️ Instalación y Ejecución
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. Clonar el repositorio
+```bash
+git clone <url-del-repositorio>
+cd ppi_challenge
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Instalar dependencias
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. Ejecutar en modo desarrollo
+```bash
+npm start
+```
 
-### `npm run eject`
+La aplicación se abrirá automáticamente en [http://localhost:3000](http://localhost:3000)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📂 Estructura del Proyecto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+src/
+├── components/           # Componentes React
+│   ├── CurrencyConverter.tsx    # Componente principal con lógica
+│   ├── CurrencyCard.tsx         # Formulario y resultados
+│   └── CurrencySelector.tsx     # Selector de monedas
+├── services/            # Servicios para API
+│   └── currencyService.ts       # Integración con VATComply API
+├── data/               # Datos estáticos
+│   └── currencies.ts           # Lista de monedas disponibles
+├── types/              # Definiciones de TypeScript
+│   └── index.ts               # Interfaces y tipos
+├── assets/             # Recursos estáticos
+│   ├── Vector.png             # Icono de intercambio
+│   └── favicon.jpg            # Favicon personalizado
+└── App.tsx             # Componente raíz
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🌐 API Utilizada
 
-## Learn More
+La aplicación utiliza la API gratuita de [VATComply](https://vatcomply.com/) para obtener tasas de cambio en tiempo real:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Endpoint**: `https://api.vatcomply.com/rates`
+- **Método**: GET
+- **Sin autenticación requerida**
+- **Límite**: Sin restricciones para uso personal
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 💡 Cómo Usar
+
+1. **Ingresa la cantidad** que deseas convertir en el campo "Amount"
+2. **Selecciona la moneda de origen** en el dropdown "From"
+3. **Selecciona la moneda de destino** en el dropdown "To"
+4. **Ve el resultado** actualizado automáticamente
+5. **Usa el botón de intercambio** (⇄) para cambiar las monedas rápidamente
+6. **Haz clic en los nombres de las monedas** para obtener más información en XE.com
+
+## 🎨 Características de Diseño
+
+- **Responsive**: Se adapta a diferentes tamaños de pantalla
+- **Tipografía**: Fuente Inter de Google Fonts
+- **Colores**: Esquema de colores profesional
+- **Iconografía**: Iconos SVG optimizados
+- **Favicon personalizado**: Icono único en las pestañas del navegador
+
+## 🔧 Scripts Disponibles
+
+- `npm start` - Ejecuta la aplicación en modo desarrollo
+- `npm run eject` - Expone la configuración de webpack (irreversible)
+
+## 🐛 Solución de Problemas
+
+### Error de puerto ocupado
+Si el puerto 3000 está ocupado, el sistema te preguntará si quieres usar otro puerto. Responde "Y" para continuar.
+
+### Error de red
+Si hay problemas para obtener las tasas de cambio, verifica tu conexión a internet y que la API de VATComply esté disponible.
+
+### Problemas con npm
+Si tienes problemas con las dependencias:
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
+
+
+**Desafio desarrollado por Alejo Veron, front-end/mobile developer usando React Vite y TypeScript para la empresa ppi**
