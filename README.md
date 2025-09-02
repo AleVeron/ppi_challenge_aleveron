@@ -31,7 +31,7 @@ Antes de comenzar, asegúrate de tener instalado:
 ### 1. Clonar el repositorio
 ```bash
 git clone https://github.com/AleVeron/ppi_challenge_aleveron.git
-cd ppi_challenge
+cd ppi_challenge_aleveron
 ```
 
 ### 2. Instalar dependencias
