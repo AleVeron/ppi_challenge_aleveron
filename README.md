@@ -46,6 +46,13 @@ npm start
 
 La aplicación se abrirá automáticamente en [http://localhost:3000](http://localhost:3000)
 
+### 4. Construir para producción
+```bash
+npm run build
+```
+
+Los archivos optimizados se generarán en la carpeta `build/`
+
 
 ## 📂 Estructura del Proyecto
 
@@ -96,6 +103,7 @@ La aplicación utiliza la API gratuita de [VATComply](https://vatcomply.com/) pa
 ## 🔧 Scripts Disponibles
 
 - `npm start` - Ejecuta la aplicación en modo desarrollo
+- `npm run build` - Construye la aplicación para producción
 - `npm run eject` - Expone la configuración de webpack (irreversible)
 
 ## 🐛 Solución de Problemas
@@ -113,5 +121,31 @@ rm -rf node_modules package-lock.json
 npm install
 ```
 
+## 🚀 Demo en Vivo
 
-**Desafio desarrollado por Alejo Veron, front-end/mobile developer usando React Vite y TypeScript para la empresa ppi**
+Puedes ver la aplicación funcionando en: [GitHub Pages](https://aleveron.github.io/ppi_challenge_aleveron/) *(pendiente de configuración)*
+
+## 📸 Capturas de Pantalla
+
+### Vista Desktop
+![Desktop View](./screenshots/desktop-view.png) *(pendiente de agregar)*
+
+### Vista Mobile
+![Mobile View](./screenshots/mobile-view.png) *(pendiente de agregar)*
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Para cambios importantes, por favor abre un issue primero para discutir qué te gustaría cambiar.
+
+### Pasos para contribuir:
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📝 Licencia
+
+Este proyecto es de código abierto y está disponible bajo la licencia MIT.
+
+**Desafío desarrollado por Alejo Veron, front-end/mobile developer usando React y TypeScript para la empresa PPI**
